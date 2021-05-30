@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SearchBar = () => {
-  return <div>Mercado Liebre</div>;
+  return (
+    <div>
+      <nav>
+        <div>
+          <img src="" alt="" />
+        </div>
+        <div>
+          <input type="search" value="" />
+          <button type="submit"></button>
+        </div>
+      </nav>
+    </div>
+  );
 };
 
 export default SearchBar;
