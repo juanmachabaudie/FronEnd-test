@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
-import SearchBar from "./components/SearchBar";
-import SearchedProducts from "./components/SearchedProducts";
-import ProductDetail from "./components/ProductDetail";
+import SearchBar from "./components/SearchBar/SearchBar";
+import SearchedProducts from "./components/SearchedProduct/SearchedProducts";
+import ProductDetail from "./components/ProductDetail/ProductDetail";
 
 const App = () => {
   return (
     <Fragment>
       <Route path="/" component={SearchBar} />
-      <Route path="/items?search" component={SearchedProducts} />
-      <Route path="/items/:id" component={ProductDetail} />
+      <Route exact path="/items" component={SearchedProducts} />
+      <Route exact path="/items/:id" component={ProductDetail} />
     </Fragment>
   );
 };
