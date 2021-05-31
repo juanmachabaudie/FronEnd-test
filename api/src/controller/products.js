@@ -14,10 +14,10 @@ const productController = {
           name: "Juan Manuel",
           lastname: "Gimenez Chabaudie",
         },
-        categories: [categories(data.filters[0].values[0].path_from_root)],
-        items: [items(data.results)],
+        categories: categories(data.filters[0].values[0].path_from_root),
+        items: items(data.results),
       };
-      res.status(200).send(productsObj);
+      res.status(200).json({ productsObj });
     } catch (error) {
       res.status(500).json(error);
     }
