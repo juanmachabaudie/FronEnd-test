@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./_searchBar.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import searchIcon from "../../assets/ic_Search.png";
+import logo from "../../assets/Logo_ML.png";
 
 const SearchBar = () => {
   const [product, setProduct] = useState("");
@@ -12,32 +12,28 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="container">
-      <nav className="navbar">
-        <div>
-          <Link to={"/"}>
-            <img
-              className="imgScss"
-              src="https://static.educacionit.com/common/assets/imagotype-mercado-libre-fill-color.svg"
-              alt="logo"
-            />
-          </Link>
-        </div>
-        <div>
-          <input
-            className="searchField"
-            onChange={handleChange}
-            type="text"
-            value={product}
-          />
-          <Link to={`/items?search=${product}`}>
-            <button type="submit">
-              <FontAwesomeIcon icon={faSearch} />
-            </button>
-          </Link>
-        </div>
-      </nav>
-    </div>
+    <nav className="navbar">
+      <div className="logoDiv">
+        <Link to={"/"}>
+          <img src={logo} className="logo" alt="logo" />
+        </Link>
+      </div>
+      <div className="searchInput">
+        <input
+          className="searchField"
+          onChange={handleChange}
+          type="text"
+          placeholder="Nunca dejes de buscar"
+          value={product}
+        />
+        <Link className="searchBtn" to={`/items?search=${product}`}>
+          <button type="submit"></button>
+          <span>
+            <img src={searchIcon} alt="search" />
+          </span>
+        </Link>
+      </div>
+    </nav>
   );
 };
 

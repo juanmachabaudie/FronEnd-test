@@ -1,9 +1,51 @@
-$primary: yellow;
-
 .navbar {
-  background-color: $primary;
+  background-color: #ffe600;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 3rem 3rem;
+  justify-items: center;
+  align-items: center;
 
-  .imgScss {
-    width: 2rem;
+  .logoDiv {
+    margin-top: 1rem;
+  }
+
+  .searchInput {
+    display: flex;
+    width: 80%;
+    .searchField {
+      width: 90%;
+      padding: 3px;
+      border: none;
+      border-radius: 3px 0 0 3px;
+    }
+    .searchField:focus {
+      outline: none;
+    }
+    .searchBtn {
+      background-color: #eeeeee;
+      border-radius: 0 3px 3px 0;
+      width: 10%;
+      padding: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 3rem;
+    justify-items: start;
+    .logoDiv {
+      grid-column: 3/4;
+      margin-top: 3px;
+    }
+    .searchInput {
+      grid-column: 4/11;
+      width: 100%;
+    }
   }
 }

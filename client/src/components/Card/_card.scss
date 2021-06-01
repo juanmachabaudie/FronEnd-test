@@ -1,0 +1,46 @@
+.cardContainer {
+  background-color: white;
+  border: 1px solid #eeeeee;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 60%;
+  .thumbnail {
+    width: 80%;
+    margin: 3%;
+    img {
+      width: 100%;
+    }
+  }
+  .description {
+    margin: auto 2%;
+    padding: 2%;
+    .cardPrice {
+      font-size: 1.2rem;
+      margin-bottom: 5%;
+    }
+    .link {
+      text-decoration: none;
+      color: #333333;
+      .cardTitle {
+        font-size: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 600px) {
+  .cardContainer {
+    .thumbnail {
+      width: 70%;
+    }
+    .description {
+      .cardPrice {
+        font-size: 1.5rem;
+      }
+      .link {
+        .cardTitle {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
