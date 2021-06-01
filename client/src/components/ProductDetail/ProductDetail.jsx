@@ -22,7 +22,7 @@ const ProductDetail = (props) => {
       <div className="characteristics">
         <p>{detail.condition}</p>
         <h3 className="detailTitle">{detail.title}</h3>
-        <h2 className="detailPrice">$ {price}</h2>
+        <h2 className="detailPrice">${price}</h2>
         <button className="submitBtn" type="submit">
           Comprar
         </button>
