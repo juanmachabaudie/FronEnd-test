@@ -14,11 +14,11 @@ const items = (data) => {
       title: data[i].title,
       price: {
         currency: data[i].currency_id,
-        amount: data[i].price,
+        amount: Intl.NumberFormat("de-DE").format(data[i].price),
         decimals: "",
       },
       picture: data[i].thumbnail,
-      condition: data[i].condition,
+      condition: data[i].condition == "new" ? "Nuevo" : "Usado",
       free_shipping: data[i].shipping.free_shipping,
     });
   }
@@ -31,13 +31,13 @@ const detailItem = (item, description) => {
     title: item.title,
     price: {
       currency: item.currency_id,
-      amount: item.price,
+      amount: Intl.NumberFormat("de-DE").format(item.price),
       decimals: "",
     },
     picture: item.pictures[0].url,
-    condition: item.condition,
+    condition: item.condition == "new" ? "Nuevo" : "Usado",
     free_shipping: item.shipping.free_shipping,
-    sold_quantity: item.sold_quantity,
+    sold_quantity: Intl.NumberFormat("de-DE").format(item.sold_quantity),
     description: description.plain_text,
   };
 };

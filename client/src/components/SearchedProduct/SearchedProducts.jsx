@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Card from "../Card/Card";
 import "./_searchedProducts.scss";
@@ -22,9 +23,13 @@ const SearchedProducts = () => {
       <div className="productsContainer">
         {products?.map((product) => {
           return (
-            <div key={product.id}>
+            <Link
+              to={`/items/${product.id}`}
+              style={{ color: "inherit", textDecoration: "inherit" }}
+              key={product.id}
+            >
               <Card product={product} />
-            </div>
+            </Link>
           );
         })}
       </div>

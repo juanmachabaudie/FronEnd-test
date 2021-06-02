@@ -3,26 +3,41 @@
   border: 1px solid #eeeeee;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
   .thumbnail {
-    width: 80%;
+    width: 100%;
     margin: 3%;
+    justify-self: center;
     img {
       width: 100%;
     }
   }
   .description {
-    margin: auto 2%;
-    padding: 2%;
-    .cardPrice {
-      font-size: 1.2rem;
-      margin-bottom: 5%;
-    }
+    margin: auto 0;
     .link {
       text-decoration: none;
       color: #333333;
       .cardTitle {
-        font-size: 100%;
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+    }
+    .cardPrice {
+      display: inline;
+      .price {
+        font-size: 20px;
+        margin-bottom: 5%;
+        display: inline;
+      }
+      .currency {
+        font-size: 16px;
+        padding: 4px;
+      }
+    }
+    .shipping {
+      margin: 5%;
+      img {
+        width: 10%;
       }
     }
   }
@@ -33,12 +48,22 @@
       width: 70%;
     }
     .description {
-      .cardPrice {
-        font-size: 1.5rem;
-      }
       .link {
         .cardTitle {
-          font-size: 1.1rem;
+          font-size: 20px;
+          font-weight: 200;
+          line-height: 26px;
+        }
+      }
+      .cardPrice {
+        .price {
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+      .shipping {
+        img {
+          width: 1.5rem;
         }
       }
     }
