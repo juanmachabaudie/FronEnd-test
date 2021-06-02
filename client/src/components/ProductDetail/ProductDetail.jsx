@@ -15,21 +15,24 @@ const ProductDetail = (props) => {
   }, []);
 
   return (
-    <div className="detailContainer">
-      <div className="img">
-        <img className="detailImg" src={detail.picture} alt={detail.title} />
-      </div>
-      <div className="characteristics">
-        <p>{detail.condition}</p>
-        <h3 className="detailTitle">{detail.title}</h3>
-        <h2 className="detailPrice">${price}</h2>
-        <button className="submitBtn" type="submit">
-          Comprar
-        </button>
-      </div>
-      <div className="description">
-        <h2>Descripción</h2>
-        <p>{detail.description}</p>
+    <div className="detail">
+      <div className="detailContainer">
+        <div className="img">
+          <img className="detailImg" src={detail.picture} alt={detail.title} />
+        </div>
+        <div className="characteristics">
+          <p className="condition">{detail.condition}</p>
+          <p className="sold">{detail.sold_quantity} Vendidos</p>
+          <h3 className="detailTitle">{detail.title}</h3>
+          <h2 className="detailPrice">${price}</h2>
+          <button className="submitBtn" type="submit">
+            Comprar
+          </button>
+        </div>
+        <div className="description">
+          <h2>Descripción</h2>
+          <p>{detail.description}</p>
+        </div>
       </div>
     </div>
   );

@@ -48,11 +48,11 @@
     justify-items: start;
   }
   .navbar .logoDiv {
-    grid-column: 3/4;
+    grid-column: 2/3;
     margin: 4px 8px 0 0;
   }
   .navbar .searchForm {
-    grid-column: 4/11;
+    grid-column: 3/12;
   }
   .navbar .searchForm .searchInput .searchField {
     grid-column: 1/12;
@@ -77,14 +77,14 @@
     grid-template-columns: repeat(12, 1fr);
   }
   .searchBody .category {
-    grid-column: 3/6;
+    grid-column: 2/5;
     margin-left: 0;
   }
   .searchBody .category p {
     font-size: 1rem;
   }
   .searchBody .productsContainer {
-    grid-column: 3/11;
+    grid-column: 2/12;
   }
 }
 .detailContainer {
@@ -94,12 +94,15 @@
   grid-template-rows: auto;
 }
 .detailContainer .img {
-  width: 50%;
-  margin: 5% auto;
+  width: 100%;
+  padding: 5% 0;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
 }
 .detailContainer .img .detailImg {
-  width: 100%;
-  border-radius: 2%;
+  max-height: 300px;
+  width: auto;
 }
 .detailContainer .characteristics,
 .detailContainer .description {
@@ -107,37 +110,45 @@
 }
 .detailContainer .characteristics {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(4, auto);
-  justify-items: center;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, auto);
+  justify-items: start;
+  align-items: center;
 }
-.detailContainer .characteristics p {
+.detailContainer .characteristics .condition {
   grid-column: 1/2;
-  margin-bottom: 50%;
+  margin-bottom: 1rem;
+  border-right: 1px solid #999999;
+  padding-right: 1rem;
+}
+.detailContainer .characteristics .sold {
+  grid-column: 2/4;
+  margin-bottom: 1rem;
 }
 .detailContainer .characteristics .detailTitle {
-  grid-column: 1/13;
+  grid-column: 1/5;
   margin-bottom: 5%;
 }
 .detailContainer .characteristics .detailPrice {
-  grid-column: 1/5;
+  grid-column: 1/3;
 }
 .detailContainer .characteristics .submitBtn {
-  grid-column: 11/12;
+  justify-self: center;
+  grid-column: 3/5;
   background-color: #3483fa;
-  color: #eeeeee;
+  color: white;
   border: none;
-  padding: 5% 40%;
+  padding: 4px 2rem;
   border-radius: 4px;
   cursor: pointer;
 }
 .detailContainer .characteristics .submitBtn:hover {
-  background-color: #2968c8;
+  background-color: #3483fa;
 }
 .detailContainer .description {
   background-color: #eeeeee;
   border-radius: 5px;
-  padding: 5%;
+  padding: 1rem;
 }
 .detailContainer .description h2 {
   font-size: 1.5rem;
@@ -145,17 +156,64 @@
 }
 
 @media (min-width: 600px) {
-  .detailContainer {
+  .detail {
+    margin: 2% 0;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
-  .detailContainer .img {
-    grid-column: 2/9;
+  .detail .detailContainer {
+    border-radius: 8px;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    justify-items: center;
   }
-  .detailContainer .characteristics {
-    grid-column: 9/12;
+  .detail .detailContainer .img {
+    grid-column: 1/7;
   }
-  .detailContainer .description {
-    grid-column: 2/9;
+  .detail .detailContainer .characteristics {
+    align-self: center;
+    grid-column: 8/12;
+    grid-template-rows: repeat(4, auto);
+    justify-items: center;
+    align-items: center;
+    height: 50%;
+  }
+  .detail .detailContainer .characteristics .condition {
+    grid-column: 1/2;
+    margin-bottom: 0;
+  }
+  .detail .detailContainer .characteristics .sold {
+    grid-column: 2/4;
+    margin-bottom: 0;
+  }
+  .detail .detailContainer .characteristics .detailTitle {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+  .detail .detailContainer .characteristics .detailPrice {
+    grid-column: 1/3;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+  }
+  .detail .detailContainer .characteristics .submitBtn {
+    grid-column: 1/5;
+    font-size: 1rem;
+    line-height: 2rem;
+    border-radius: 6px;
+  }
+  .detail .detailContainer .characteristics .submitBtn:hover {
+    background-color: #2968c8;
+  }
+  .detail .detailContainer .characteristics .submitBtn:focus {
+    background-color: #1f4e96;
+    box-shadow: rgba(30, 109, 255, 0.3) 0px 0px 0px 3px;
+  }
+  .detail .detailContainer .description {
+    grid-column: 2/12;
   }
 }
 * {

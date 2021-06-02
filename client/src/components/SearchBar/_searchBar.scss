@@ -46,11 +46,11 @@
     grid-template-rows: 3rem;
     justify-items: start;
     .logoDiv {
-      grid-column: 3/4;
+      grid-column: 2/3;
       margin: 4px 8px 0 0;
     }
     .searchForm {
-      grid-column: 4/11;
+      grid-column: 3/12;
       .searchInput {
         .searchField {
           grid-column: 1/12;

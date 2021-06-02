@@ -12,14 +12,14 @@
   .searchBody {
     grid-template-columns: repeat(12, 1fr);
     .category {
-      grid-column: 3/6;
+      grid-column: 2/5;
       margin-left: 0;
       p {
         font-size: 1rem;
       }
     }
     .productsContainer {
-      grid-column: 3/11;
+      grid-column: 2/12;
     }
   }
 }
