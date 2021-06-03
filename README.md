@@ -25,11 +25,11 @@
 
 ### Lista de productos buscados:
 
-<img src="client\public\images\02_Detalle.png" alt="diseño2">
+<img src="client\public\images\02_Resultados.png" alt="diseño2">
 
 ### Detalle de Producto:
 
-<img src="client\public\images\02_Resultados.png" alt="diseño3">
+<img src="client\public\images\02_Detalle.png" alt="diseño3">
 <br/>
 Para correr el test, hay que correr el Back (ubicado en la carpeta 'api') para poder tener resultados en las busquedas y luego el Front (ubicado en la carpeta 'client').
 
