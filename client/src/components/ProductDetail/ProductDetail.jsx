@@ -6,7 +6,6 @@ const ProductDetail = (props) => {
   const [detail, setDetail] = useState({});
   const { id } = props.match.params;
   const [price, setPrice] = useState(0);
-  //arreglar ↑↑↑↑
 
   useEffect(async () => {
     const request = await axios.get(`http://localhost:3001/api/items/${id}`);
